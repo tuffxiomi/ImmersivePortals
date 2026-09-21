@@ -1,0 +1,9 @@
+{
+  "minecraftVersion": "1.26.51.01_RC0",
+  "abi": "arm64-v8a",
+  "sha256": "b8a6351503d330628335a80e8131acd45291fa9a747465f0f34a31b2346847b4",
+  "buildId": "712509dc14ccc233e91f267937dfb46ecdcc4b68",
+  "status": "fingerprint-only",
+  "functionSignatures": {},
+  "verifiedOffsets": {}
+}

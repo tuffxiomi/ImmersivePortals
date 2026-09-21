@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "enabled": {"type": "boolean"},
+    "seamlessTeleport": {"type": "boolean"},
+    "portalView": {"type": "boolean"},
+    "maxRecursion": {"type": "integer", "minimum": 0, "maximum": 16},
+    "crossingCooldownMs": {"type": "integer", "minimum": 0, "maximum": 5000},
+    "portalTriggerEpsilon": {"type": "number", "minimum": 0.0, "maximum": 1.0},
+    "gravityScale": {"type": "number", "minimum": 0.1, "maximum": 4.0},
+    "portals": {"type": "array"}
+  },
+  "required": ["enabled", "portals"]
+}

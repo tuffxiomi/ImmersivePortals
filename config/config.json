@@ -1,0 +1,33 @@
+{
+  "enabled": true,
+  "seamlessTeleport": true,
+  "portalView": false,
+  "maxRecursion": 5,
+  "crossingCooldownMs": 350,
+  "portalTriggerEpsilon": 0.05,
+  "gravityScale": 1.0,
+  "portals": [
+    {
+      "id": "overworld_a",
+      "dimension": 0,
+      "center": [0.5, 64.0, 0.5],
+      "normal": [1.0, 0.0, 0.0],
+      "right": [0.0, 0.0, 1.0],
+      "up": [0.0, 1.0, 0.0],
+      "width": 2.0,
+      "height": 3.0,
+      "destination": "overworld_b"
+    },
+    {
+      "id": "overworld_b",
+      "dimension": 0,
+      "center": [10.5, 64.0, 0.5],
+      "normal": [-1.0, 0.0, 0.0],
+      "right": [0.0, 0.0, -1.0],
+      "up": [0.0, 1.0, 0.0],
+      "width": 2.0,
+      "height": 3.0,
+      "destination": "overworld_a"
+    }
+  ]
+}

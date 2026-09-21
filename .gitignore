@@ -1,0 +1,7 @@
+/build-*/
+/.idea/
+/.vs/
+*.user
+*.apk
+*.so
+*.levipack

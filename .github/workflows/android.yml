@@ -1,0 +1,32 @@
+name: Android native mod
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: android-actions/setup-android@v3
+      - name: Install Android toolchain
+        run: sdkmanager --install "platform-tools" "platforms;android-35" "cmake;3.22.1" "ndk;28.2.13676358"
+      - name: Run host portal-math tests
+        run: |
+          cmake -S . -B build-host -G Ninja
+          cmake --build build-host --target portal_core_tests
+          ctest --test-dir build-host --output-on-failure
+      - name: Build arm64-v8a .levipack
+        run: |
+          export ANDROID_NDK_HOME="$ANDROID_SDK_ROOT/ndk/28.2.13676358"
+          ./scripts/package.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: immersive-portals-levipack
+          path: build-arm64-v8a/dist/arm64-v8a/immersive_portals.levipack
