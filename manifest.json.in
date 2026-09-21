@@ -1,7 +1,7 @@
 {
   "type": "preload-native",
   "name": "@MOD_NAME@",
-  "author": "@MOD_AUTHOR@",
+  "author": "xiomi",
   "version": "@MOD_VERSION@",
   "entry": "lib@MOD_LIBRARY_NAME@.so",
   "minecraft_versions": @MOD_MINECRAFT_VERSIONS@,
